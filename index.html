@@ -64,6 +64,25 @@
       margin-top: 1rem;
     }
     
+    /* Mission section flex container */
+    .mission-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .mission-container .text {
+      flex: 1;
+    }
+    .mission-container .image {
+      flex: 1;
+      text-align: right;
+    }
+    .mission-container .image img {
+      max-width: 100%;
+      height: auto;
+    }
+    
     /* Responsive adjustments */
     @media (max-width: 768px) {
       header {
@@ -71,6 +90,13 @@
       }
       header .contact {
         margin-top: 0.5rem;
+      }
+      .mission-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .mission-container .image {
+        text-align: center;
       }
     }
   </style>
@@ -87,10 +113,16 @@
     <!-- Top Section: Our Mission -->
     <section id="mission">
       <h2>Our Mission</h2>
-      <p>
-        We aim to innovate and inspire, forging sustainable solutions and partnerships that drive excellence.
-      </p>
-      <img src="image1.jpg" alt="Our Mission Image" />
+      <div class="mission-container">
+        <div class="text">
+          <p>
+            We aim to innovate and inspire, forging sustainable solutions and partnerships that drive excellence.
+          </p>
+        </div>
+        <div class="image">
+          <img src="wavesquare.png" alt="Wave Square" />
+        </div>
+      </div>
     </section>
     
     <!-- Bottom Section: Who We Are -->
@@ -99,7 +131,7 @@
       <p>
         We are a dynamic team dedicated to breaking boundaries and delivering exceptional results. Our expertise spans across multiple industries, enabling us to craft tailored solutions for our partners.
       </p>
-      <img src="image2.jpg" alt="Who We Are Image" />
+      <img src="wavebottom.png" alt="Wave Bottom" />
     </section>
   </div>
 </body>
