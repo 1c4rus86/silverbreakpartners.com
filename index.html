@@ -11,14 +11,12 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     /* Body */
     body {
       font-family: Arial, sans-serif;
       background: #E3E6EA; /* Light bluish background */
       color: #333;
     }
-
     /* Header */
     header {
       display: flex;
@@ -46,7 +44,6 @@
     header .contact-link:hover {
       background: #B0B0B0;
     }
-
     /* Generic container styling */
     .container {
       max-width: 900px;
@@ -56,15 +53,14 @@
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-
-    /* 1) Top-left container (text) and 2) Top-right container (image) in a row */
+    /* Top section (row) */
     .top-section {
       display: flex;
-      flex-wrap: wrap; /* allows wrapping on smaller screens */
+      flex-wrap: wrap;
       gap: 1.5rem;
     }
     .top-left, .top-right {
-      flex: 1; /* each takes half width on large screens */
+      flex: 1;
     }
     .top-right {
       display: flex;
@@ -75,7 +71,6 @@
       max-width: 100%;
       height: auto;
     }
-
     /* Headings & Paragraphs */
     h1, h2 {
       margin-bottom: 1rem;
@@ -85,15 +80,13 @@
       line-height: 1.6;
       margin-bottom: 1rem;
     }
-
-    /* 4) Bottom banner styling */
+    /* Bottom banner styling */
     .bottom-banner img {
       display: block;
       width: 100%;
       height: auto;
       border-radius: 5px;
     }
-
     /* Responsive adjustments */
     @media (max-width: 600px) {
       header {
@@ -124,13 +117,14 @@
     <div class="top-left">
       <h1>Shepherding legacies into the future</h1>
       <p>
-        Silver Break Partners is a group of investors dedicated to preserving and evolving the legacy of small to mid-sized businesses. 
-        We invest in exceptional companies with strong foundations — guiding them into their next chapter with strategic support, 
+        Silver Break Partners is a group of investors dedicated to preserving and evolving the legacy of small to mid-sized businesses.
+        We invest in exceptional companies with strong foundations — guiding them into their next chapter with strategic support,
         operational insight, and long-term capital. Our mission is to honor what’s been built while unlocking what’s possible.
       </p>
     </div>
     <!-- Top-right (wavesquare image) -->
     <div class="top-right">
+      <!-- Ensure this image exists at 'images/wavesquare.png' -->
       <img src="images/wavesquare.png" alt="Wave Square">
     </div>
   </div>
@@ -139,16 +133,17 @@
   <div class="container middle-section">
     <h2>Who we are</h2>
     <p>
-      Our team consists of three experienced executives who met during their MBA at Wharton. Collectively, we bring a cross-functional 
-      background in strategy, operations, and leadership, with experience at leading firms such as McKinsey &amp; Company, Amazon, 
-      Bain &amp; Company, and Fortune 500 corporations in the technology and healthcare sectors. This diverse perspective enables us 
-      to approach acquisitions with both analytical rigor and a deep appreciation for the operational realities of running and 
+      Our team consists of three experienced executives who met during their MBA at Wharton. Collectively, we bring a cross-functional
+      background in strategy, operations, and leadership, with experience at leading firms such as McKinsey &amp; Company, Amazon,
+      Bain &amp; Company, and Fortune 500 corporations in the technology and healthcare sectors. This diverse perspective enables us
+      to approach acquisitions with both analytical rigor and a deep appreciation for the operational realities of running and
       scaling a business.
     </p>
   </div>
 
   <!-- 4) Bottom banner: wavebottom image -->
   <div class="container bottom-banner">
+    <!-- Ensure this image exists at 'images/wavebottom.png' -->
     <img src="images/wavebottom.png" alt="Wave Bottom">
   </div>
 
