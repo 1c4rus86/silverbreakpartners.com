@@ -47,37 +47,37 @@
       background: #B0B0B0;
     }
 
-    /* Main Container (the “card”) */
+    /* Generic container styling */
     .container {
-      position: relative; /* for positioning images absolutely inside */
-      max-width: 700px;
+      max-width: 900px;
       margin: 2rem auto;
+      padding: 1.5rem;
       background: #ECEFF1; /* Slightly bluish/gray card */
       border-radius: 10px;
-      padding: 2rem;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      overflow: hidden; /* hide any part of wave images that might exceed container */
     }
 
-    /* Wave Images */
-    .wave-top-right {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      width: 120px; /* Adjust as needed */
-      opacity: 0.6; /* Slight transparency to blend in */
+    /* 1) Top-left container (text) and 2) Top-right container (image) in a row */
+    .top-section {
+      display: flex;
+      flex-wrap: wrap; /* allows wrapping on smaller screens */
+      gap: 1.5rem;
     }
-    .wave-bottom {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0.6; /* Slight transparency */
+    .top-left, .top-right {
+      flex: 1; /* each takes half width on large screens */
+    }
+    .top-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .top-right img {
+      max-width: 100%;
+      height: auto;
     }
 
     /* Headings & Paragraphs */
-    h1 {
-      font-size: 1.8rem;
+    h1, h2 {
       margin-bottom: 1rem;
       color: #000;
     }
@@ -86,23 +86,15 @@
       margin-bottom: 1rem;
     }
 
-    /* “Contact Us” Button */
-    .contact-button {
-      display: inline-block;
-      text-decoration: none;
-      background: #2E8B57; /* Marine green */
-      color: #fff;
-      padding: 0.75rem 1.5rem;
+    /* 4) Bottom banner styling */
+    .bottom-banner img {
+      display: block;
+      width: 100%;
+      height: auto;
       border-radius: 5px;
-      font-weight: bold;
-      margin: 1rem 0;
-      transition: background 0.2s;
-    }
-    .contact-button:hover {
-      background: #276B48;
     }
 
-    /* Responsive */
+    /* Responsive adjustments */
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -110,18 +102,10 @@
       }
       .container {
         margin: 1rem;
-        padding: 1.5rem;
+        padding: 1rem;
       }
-      h1 {
+      h1, h2 {
         font-size: 1.4rem;
-      }
-      .wave-top-right {
-        width: 90px;
-        top: 1rem;
-        right: 1rem;
-      }
-      .wave-bottom {
-        width: 100%;
       }
     }
   </style>
@@ -134,34 +118,38 @@
     <a href="mailto:contact@silverbreakpartners.com" class="contact-link">Contact</a>
   </header>
 
-  <!-- Main Container -->
-  <div class="container">
-    <!-- Wave Images -->
-    <img src="images/wavesquare.png" alt="Wave Square" class="wave-top-right" />
-    <img src="images/wavebottom.png" alt="Wave Bottom" class="wave-bottom" />
+  <!-- 1) Top-left container & 2) Top-right container -->
+  <div class="container top-section">
+    <!-- Top-left (text) -->
+    <div class="top-left">
+      <h1>Shepherding legacies into the future</h1>
+      <p>
+        Silver Break Partners is a group of investors dedicated to preserving and evolving the legacy of small to mid-sized businesses. 
+        We invest in exceptional companies with strong foundations — guiding them into their next chapter with strategic support, 
+        operational insight, and long-term capital. Our mission is to honor what’s been built while unlocking what’s possible.
+      </p>
+    </div>
+    <!-- Top-right (wavesquare image) -->
+    <div class="top-right">
+      <img src="images/wavesquare.png" alt="Wave Square">
+    </div>
+  </div>
 
-    <!-- Main Heading -->
-    <h1>Shepherding legacies into the future</h1>
-
-    <!-- Text (from your screenshot) -->
+  <!-- 3) Middle container: Who We Are -->
+  <div class="container middle-section">
+    <h2>Who we are</h2>
     <p>
-      Silver Break Partners is a private equity bjixj poised to procer,ing and evotting terrain of scalj tased businsac.
-      We trust in exceptional companies perfinaing Grong levoations – auditing them fllcial their ear expansions,
-      with strong builders, uppullational insight, and long, term range.
+      Our team consists of three experienced executives who met during their MBA at Wharton. Collectively, we bring a cross-functional 
+      background in strategy, operations, and leadership, with experience at leading firms such as McKinsey &amp; Company, Amazon, 
+      Bain &amp; Company, and Fortune 500 corporations in the technology and healthcare sectors. This diverse perspective enables us 
+      to approach acquisitions with both analytical rigor and a deep appreciation for the operational realities of running and 
+      scaling a business.
     </p>
+  </div>
 
-    <!-- Contact Us Button -->
-    <a class="contact-button" href="mailto:contact@silverbreakpartners.com">Contact Us</a>
-
-    <p>
-      Silver Break Partners is a Southern California-based investment group focused on acquiring and growing small businesses.
-    </p>
-
-    <p>
-      Silver form consists three experienced executives who met during their IA/SG of Mhashon, Corcle@airit – we bring a robust background its t'esidual interpretations
-      and with 'jaefic, Th. iXWmar A Company, Anacure, Das A Company, and more. Over 600 cijfetations, in the technology and tedbdrations with Tlecfa cjj. as.
-      bves@whi.danoc. We are a prospective partner for the operational realities of funding and scaling businesses.
-    </p>
+  <!-- 4) Bottom banner: wavebottom image -->
+  <div class="container bottom-banner">
+    <img src="images/wavebottom.png" alt="Wave Bottom">
   </div>
 
 </body>
