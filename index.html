@@ -4,41 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SilverBreak Partners</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background-color: #e0e7ec;
+      color: #1a1a1a;
       line-height: 1.6;
     }
     header {
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 1rem 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #e0e7ec;
     }
     .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: 500;
+    }
+    .hero {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      padding: 3rem 2rem;
+      background-color: #e0e7ec;
     }
-    .logo img {
-      height: 48px;
+    .hero-text {
+      flex: 1 1 45%;
     }
-    .content {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-    h1 {
+    .hero-text h1 {
+      font-family: 'Lora', serif;
       font-size: 2rem;
-      color: #1c2b3a;
+      margin-bottom: 1rem;
     }
-    p {
-      margin: 1rem 0;
+    .hero-text p {
+      margin-bottom: 1.5rem;
+    }
+    .hero-text button {
+      padding: 0.75rem 1.5rem;
+      border: 1px solid #1a1a1a;
+      background: transparent;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hero-image {
+      flex: 1 1 45%;
+      text-align: center;
+    }
+    .hero-image img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
     footer {
       text-align: center;
@@ -50,22 +87,33 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="SilverBreak Partners Logo" />
-      <strong>SilverBreak Partners</strong>
-    </div>
+    <div class="logo">SILVER BREAK PARTNERS</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <div class="content">
-    <h1>Preserving Legacy. Unlocking Possibility.</h1>
-    <p>
-      SilverBreak Partners is a group of investors dedicated to preserving and evolving the legacy of small to mid-sized businesses. We invest in exceptional companies with strong foundations — guiding them into their next chapter with strategic support, operational insight, and long-term capital. Our mission is to honor what’s been built while unlocking what’s possible.
-    </p>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Shepherding legacies into the future</h1>
+      <p>
+        Silver Break Partners is a group of investors dedicated to preserving and evolving the legacy of small to mid-sized businesses. We invest in exceptional companies with strong foundations — guiding them into their next chapter with strategic support, operational insight, and long-term capital. Our mission is to honor what’s been built while unlocking what’s possible.
+      </p>
+      <button>CONTACT US</button>
+    </div>
+    <div class="hero-image">
+      <img src="hero-background.png" alt="Hero background image">
+    </div>
+  </section>
 
+  <section class="section" id="about">
+    <h2>Silver Break Partners is a Southern California-based investment group focused on acquiring and growing small businesses</h2>
     <p>
       Our team consists of three experienced executives who met during their MBA at Wharton. Collectively, we bring a cross-functional background in strategy, operations, and leadership, with experience at leading firms such as McKinsey & Company, Amazon, Bain & Company, and Fortune 500 corporations in the technology and healthcare sectors. This diverse perspective enables us to approach acquisitions with both analytical rigor and a deep appreciation for the operational realities of running and scaling a business.
     </p>
-  </div>
+  </section>
 
   <footer>
     &copy; 2025 SilverBreak Partners. All rights reserved.
