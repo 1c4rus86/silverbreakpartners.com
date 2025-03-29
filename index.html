@@ -11,12 +11,14 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     /* Body */
     body {
       font-family: Arial, sans-serif;
       background: #E3E6EA; /* Light bluish background */
       color: #333;
     }
+
     /* Header */
     header {
       display: flex;
@@ -44,7 +46,8 @@
     header .contact-link:hover {
       background: #B0B0B0;
     }
-    /* Generic container styling */
+
+    /* Container Styling */
     .container {
       max-width: 900px;
       margin: 2rem auto;
@@ -53,10 +56,11 @@
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    /* Top section (row) */
+
+    /* Top Section - Two columns */
     .top-section {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: wrap; /* allows wrapping on smaller screens */
       gap: 1.5rem;
     }
     .top-left, .top-right {
@@ -71,6 +75,7 @@
       max-width: 100%;
       height: auto;
     }
+
     /* Headings & Paragraphs */
     h1, h2 {
       margin-bottom: 1rem;
@@ -80,14 +85,16 @@
       line-height: 1.6;
       margin-bottom: 1rem;
     }
-    /* Bottom banner styling */
+
+    /* Bottom Banner */
     .bottom-banner img {
       display: block;
       width: 100%;
       height: auto;
       border-radius: 5px;
     }
-    /* Responsive adjustments */
+
+    /* Responsive adjustments for mobile */
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -100,6 +107,13 @@
       h1, h2 {
         font-size: 1.4rem;
       }
+      /* Stack top section vertically */
+      .top-section {
+        flex-direction: column;
+      }
+      .top-left, .top-right {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -111,7 +125,7 @@
     <a href="mailto:contact@silverbreakpartners.com" class="contact-link">Contact</a>
   </header>
 
-  <!-- 1) Top-left container & 2) Top-right container -->
+  <!-- 1) Top-left & 2) Top-right containers -->
   <div class="container top-section">
     <!-- Top-left (text) -->
     <div class="top-left">
@@ -124,12 +138,11 @@
     </div>
     <!-- Top-right (wavesquare image) -->
     <div class="top-right">
-      <!-- Ensure this image exists at 'images/wavesquare.png' -->
       <img src="images/wavesquare.png" alt="Wave Square">
     </div>
   </div>
 
-  <!-- 3) Middle container: Who We Are -->
+  <!-- 3) Middle Container -->
   <div class="container middle-section">
     <h2>Who we are</h2>
     <p>
@@ -141,9 +154,8 @@
     </p>
   </div>
 
-  <!-- 4) Bottom banner: wavebottom image -->
+  <!-- 4) Bottom Banner -->
   <div class="container bottom-banner">
-    <!-- Ensure this image exists at 'images/wavebottom.png' -->
     <img src="images/wavebottom.png" alt="Wave Bottom">
   </div>
 
