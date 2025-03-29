@@ -3,143 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SilverBreak Partners</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <title>Silver Break Partners</title>
   <style>
+    /* Reset and base styles */
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #e0e7ec;
-      color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
       line-height: 1.6;
     }
+    
+    /* Header styling */
     header {
+      background: #2E8B57; /* Marine green */
+      color: #fff;
+      padding: 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
-      background-color: #e0e7ec;
     }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .logo-container img {
-      height: 36px;
-    }
-    .logo-container span {
-      font-weight: 700;
-      font-size: 1.2rem;
-    }
-    nav a {
-      margin-left: 1.5rem;
+    header .contact {
+      background: #C0C0C0; /* Silver accent */
+      color: #2E8B57;
+      padding: 0.5rem 1rem;
       text-decoration: none;
-      color: #1a1a1a;
-      font-weight: 500;
+      border-radius: 5px;
     }
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 3rem 2rem;
-      background-color: #e0e7ec;
+    
+    /* Container for main content */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
     }
-    .hero-text {
-      flex: 1 1 45%;
-    }
-    .hero-text h1 {
-      font-family: 'Lora', serif;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .hero-text p {
-      margin-bottom: 1.5rem;
-    }
-    .hero-text a.button {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border: 1px solid #1a1a1a;
-      background: transparent;
-      font-weight: 600;
-      text-decoration: none;
-      color: #1a1a1a;
-    }
-    .hero-image {
-      flex: 1 1 45%;
-      text-align: center;
-    }
-    .hero-image img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .section {
+    
+    /* Section styling */
+    section {
+      margin-bottom: 2rem;
       padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+      background: #B0E0E6; /* Dawn blue */
+      border-radius: 10px;
     }
-    .section h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
+    section h2 {
       margin-bottom: 1rem;
+      color: #2E8B57;
     }
-    .bottom-banner {
-      margin-top: 3rem;
-      width: 100%;
+    section p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
     }
-    .bottom-banner img {
+    section img {
       width: 100%;
+      border-radius: 10px;
       display: block;
+      margin-top: 1rem;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #777;
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      header .contact {
+        margin-top: 0.5rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="SilverBreak Partners Logo">
-      <span>SILVER BREAK PARTNERS</span>
+    <div class="logo">
+      <h1>Silver Break Partners</h1>
     </div>
-    <nav>
-      <a href="mailto:info@silverbreakpartners.com">Contact</a>
-    </nav>
+    <a href="mailto:contact@silverbreakpartners.com" class="contact">Contact</a>
   </header>
-
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Shepherding legacies into the future</h1>
+  
+  <div class="container">
+    <!-- Top Section: Our Mission -->
+    <section id="mission">
+      <h2>Our Mission</h2>
       <p>
-        Silver Break Partners is a group of investors dedicated to preserving and evolving the legacy of small to mid-sized businesses. We invest in exceptional companies with strong foundations — guiding them into their next chapter with strategic support, operational insight, and long-term capital. Our mission is to honor what’s been built while unlocking what’s possible.
+        We aim to innovate and inspire, forging sustainable solutions and partnerships that drive excellence.
       </p>
-      <a class="button" href="mailto:info@silverbreakpartners.com">CONTACT US</a>
-    </div>
-    <div class="hero-image">
-      <img src="top-wave.png" alt="Top abstract silver California wave">
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Silver Break Partners is a Southern California-based investment group focused on acquiring and growing small businesses</h2>
-    <p>
-      Our team consists of three experienced executives who met during their MBA at Wharton. Collectively, we bring a cross-functional background in strategy, operations, and leadership, with experience at leading firms such as McKinsey & Company, Amazon, Bain & Company, and Fortune 500 corporations in the technology and healthcare sectors. This diverse perspective enables us to approach acquisitions with both analytical rigor and a deep appreciation for the operational realities of running and scaling a business.
-    </p>
-  </section>
-
-  <div class="bottom-banner">
-    <img src="bottom-wave.png" alt="Bottom silver wave banner">
+      <img src="image1.jpg" alt="Our Mission Image" />
+    </section>
+    
+    <!-- Bottom Section: Who We Are -->
+    <section id="about">
+      <h2>Who We Are</h2>
+      <p>
+        We are a dynamic team dedicated to breaking boundaries and delivering exceptional results. Our expertise spans across multiple industries, enabling us to craft tailored solutions for our partners.
+      </p>
+      <img src="image2.jpg" alt="Who We Are Image" />
+    </section>
   </div>
-
-  <footer>
-    &copy; 2025 SilverBreak Partners. All rights reserved.
-  </footer>
 </body>
 </html>
