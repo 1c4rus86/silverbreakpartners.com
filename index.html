@@ -52,12 +52,14 @@
     .hero-text p {
       margin-bottom: 1.5rem;
     }
-    .hero-text button {
+    .hero-text a.button {
+      display: inline-block;
       padding: 0.75rem 1.5rem;
       border: 1px solid #1a1a1a;
       background: transparent;
       font-weight: 600;
-      cursor: pointer;
+      text-decoration: none;
+      color: #1a1a1a;
     }
     .hero-image {
       flex: 1 1 45%;
@@ -77,6 +79,14 @@
       font-weight: 600;
       margin-bottom: 1rem;
     }
+    .bottom-banner {
+      margin-top: 3rem;
+      width: 100%;
+    }
+    .bottom-banner img {
+      width: 100%;
+      display: block;
+    }
     footer {
       text-align: center;
       padding: 2rem;
@@ -89,9 +99,7 @@
   <header>
     <div class="logo">SILVER BREAK PARTNERS</div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="mailto:info@silverbreakpartners.com">Contact</a>
     </nav>
   </header>
 
@@ -101,19 +109,23 @@
       <p>
         Silver Break Partners is a group of investors dedicated to preserving and evolving the legacy of small to mid-sized businesses. We invest in exceptional companies with strong foundations — guiding them into their next chapter with strategic support, operational insight, and long-term capital. Our mission is to honor what’s been built while unlocking what’s possible.
       </p>
-      <button>CONTACT US</button>
+      <a class="button" href="mailto:info@silverbreakpartners.com">CONTACT US</a>
     </div>
     <div class="hero-image">
-      <img src="hero-background.png" alt="Hero background image">
+      <img src="top-wave.png" alt="Top abstract silver California wave">
     </div>
   </section>
 
-  <section class="section" id="about">
+  <section class="section">
     <h2>Silver Break Partners is a Southern California-based investment group focused on acquiring and growing small businesses</h2>
     <p>
       Our team consists of three experienced executives who met during their MBA at Wharton. Collectively, we bring a cross-functional background in strategy, operations, and leadership, with experience at leading firms such as McKinsey & Company, Amazon, Bain & Company, and Fortune 500 corporations in the technology and healthcare sectors. This diverse perspective enables us to approach acquisitions with both analytical rigor and a deep appreciation for the operational realities of running and scaling a business.
     </p>
   </section>
+
+  <div class="bottom-banner">
+    <img src="bottom-wave.png" alt="Bottom silver wave banner">
+  </div>
 
   <footer>
     &copy; 2025 SilverBreak Partners. All rights reserved.
