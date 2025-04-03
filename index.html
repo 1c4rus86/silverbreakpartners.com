@@ -47,6 +47,12 @@
 }
 
 .fixed-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fixed-header .logo {
   font-weight: 700;
   text-transform: uppercase;
   color: #111;
@@ -194,12 +200,20 @@
         padding: 1rem;
       }
     }
+
+    .logo-icon {
+      height: 4.3rem;
+      width: auto;
+    }
   </style>
 </head>
 <body>
   <!-- Fixed Header -->
   <div class="fixed-header">
-    <div class="logo"><span>Silver</span> <span>Break</span> <span>Partners</span></div>
+    <div class="logo">
+      <img src="images/logo.png" alt="Silver Break Partners Logo" class="logo-icon" />
+      <span>Silver Break Partners</span>
+    </div>
     <a href="mailto:contact@silverbreakpartners.com">Contact</a>
   </div>
 
