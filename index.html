@@ -31,32 +31,43 @@
 
     /* Fixed Header */
     .fixed-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 60px;
-      background: rgba(255, 255, 255, 0.95);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 2rem;
-      z-index: 100;
-      backdrop-filter: blur(5px);
-    }
-    .fixed-header .logo {
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #333;
-    }
-    .fixed-header a {
-      text-decoration: none;
-      color: #333;
-      background: #C0C0C0;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: bold;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.fixed-header .logo {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.fixed-header a {
+  text-decoration: none;
+  color: #fff;
+  background: #333;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.fixed-header a:hover {
+  background: #555;
+  transform: translateY(-2px);
+}
 
     /* Fullscreen Hero Section */
     .hero {
@@ -155,6 +166,20 @@
       border-radius: 5px;
     }
 
+    /* Disclaimer Styles */
+    .disclaimer {
+      background: #d0dfe8;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .disclaimer p {
+      max-width: 1100px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
     /* Responsive Adjustments */
     @media (max-width: 600px) {
       .hero h1 {
@@ -174,7 +199,7 @@
 <body>
   <!-- Fixed Header -->
   <div class="fixed-header">
-    <div class="logo">Silver Break Partners</div>
+    <div class="logo"><span>Silver</span> <span>Break</span> <span>Partners</span></div>
     <a href="mailto:contact@silverbreakpartners.com">Contact</a>
   </div>
 
@@ -185,11 +210,7 @@
       <p>Preserving and Evolving Legacies</p>
     </div>
   </section>
-  <div class="hero-wave">
-    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-      <path class="shape-fill" d="M0,160L48,154.7C96,149,192,139,288,122.7C384,107,480,85,576,101.3C672,117,768,171,864,181.3C960,192,1056,160,1152,133.3C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-    </svg>
-  </div>
+
 
   <!-- Content Section (revealed on scroll) -->
   <section class="content" id="content">
@@ -219,6 +240,15 @@
   <div class="bottom-banner">
     <img src="images/Background.jpg" alt="Background">
   </div>
+
+  <!-- Disclaimer Section -->
+  <footer class="disclaimer">
+    <div class="content-inner">
+      <p>
+        © 2025 Silver Break Partners. All rights reserved.
+      </p>
+    </div>
+  </footer>
 
   <script>
     // Fade in content when scrolling
